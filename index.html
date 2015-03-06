@@ -36,14 +36,21 @@
 		<p>My name is Matt. I enjoy many things, including video games, dicking around on the web, trying (and failing) to be funny, and other stuff, I guess.</p>
 		
 		<button onclick="RevealBlog();">Click for my asinine blog. It's pretty boring, though.</button>
-			<script type="text/javascript">
-				function RevealBlog() {
 			
-       				<p id="demo"></p>
+       				<p id="Blog"></p>
        				
       				<script>
        				function RevealBlog() {
-    				document.getElementById("demo").innerHTML = "Yer mum";
+    					document.getElementById("Blog").innerHTML = "Yer mum";
+				}
+				</script>
+				
+		<button onclick="myFunction()">Click me</button>
+				<p id="demo"></p>
+
+				<script>
+				function myFunction() {
+					 document.getElementById("demo").innerHTML = "Hello World";
 				}
 				</script>
 		
