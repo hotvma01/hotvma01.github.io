@@ -1,0 +1,44 @@
+<html>
+        <title>
+                Matt's Temperature Converter
+        </title>
+  
+        <body>
+        
+                <input type="text" value="changeme" size="40">
+
+
+        </body>
+</html>
+
+<html>
+    <body>
+    Input Temperature
+    <input type="text" id="T" value="0" size="40"> <br>
+    <p><button onclick= "F();" id="fahrenheit">Convert to Fahrenheit</button><p/>
+    <p><button onclick= "C();">Convert to Celsius</button></p>
+    <input type="text" value=" " size="40">
+    
+    <script>
+        type="text/javascript">
+        F =function() {
+            "0" * 9 / 5 + 32=" "
+        }
+        C =function() {
+            ("0" - 32) * 5 / 9=" "
+        }
+    </script>
+    
+    <script>
+  F = function() {
+ tempc=document.querySelector('#fahrenheit').value;
+ original=document.querySelector('#original');
+original.innerHTML=tempc + " Degree C" ;
+  tempf = tempc*1.8 + 32;
+temph1= document.querySelector("#tempf");
+temph1.innerHTML= tempf + " Degree F";
+ 
+}
+</script>
+    </body>
+</html>
