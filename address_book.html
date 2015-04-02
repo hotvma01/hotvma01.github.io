@@ -1,3 +1,5 @@
+<html>
+	<body>	
 		<h1>My Address Book</h1>
     <label for="fn">First Name</label>
     <input type="text" id="fn">
@@ -19,43 +21,41 @@
       </tr>
     </table>
     
-    <script>
-    addentry=function(){
-      fn=document.querySelector("#fn").value;
-      ln=document.querySelector("#ln").value;
-      phone=document.querySelector("#phone").value;
-      email=document.querySelector("#email").value;
+	<script>
+		addentry=function(){
+		fn=document.querySelector("#fn").value;
+		ln=document.querySelector("#ln").value;
+      		phone=document.querySelector("#phone").value;
+		email=document.querySelector("#email").value;
       
-      newrow = document.createElement("tr");
-      td1=document.createElement("td");
-      td1.innerHTML=fn;
-      td1.onclick=editfn;
-      td2=document.createElement("td");
-      td2.innerHTML=ln;
-      td3=document.createElement("td");
-      td3.innerHTML=phone;
-      td4=document.createElement("td");
-      td4.innerHTML=email;
-      newrow.appendChild(td1);
-      newrow.appendChild(td2);
-      newrow.appendChild(td3);
-      newrow.appendChild(td4);
-      table=document.querySelector("#addresstable");
-      table.appendChild(newrow);
+      		newrow = document.createElement("tr");
+      		td1=document.createElement("td");
+		td1.innerHTML=fn;
+      		td1.onclick=editfn;
+      		td2=document.createElement("td");
+      		td2.innerHTML=ln;
+      		td3=document.createElement("td");
+      		td3.innerHTML=phone;
+      		td4=document.createElement("td");
+      		td4.innerHTML=email;
+      		newrow.appendChild(td1);
+      		newrow.appendChild(td2);
+      		newrow.appendChild(td3);
+      		newrow.appendChild(td4);
+      		table=document.querySelector("#addresstable");
+      		table.appendChild(newrow);
       
-      document.querySelector("#fn").value="";
-      document.querySelector("#ln").value="";
-      document.querySelector("#phone").value="";
-      document.querySelector("#email").value="";
-      
-    }
+          	document.querySelector("#fn").value="";
+      		document.querySelector("#ln").value="";
+      		document.querySelector("#phone").value="";
+      		document.querySelector("#email").value="";
+      		}
     
-    editfn=function(){
-      fn=document.querySelector("#fn").value;
-      this.innerHTML=fn;
+    		editfn=function(){
+      		fn=document.querySelector("#fn").value;
+      		this.innerHTML=fn;
       
-    }
-      
-      
-    </script>
-    <p>Make sure to edit this^^ because it is lifted right out of Ranum's website.</p>
+		}
+      	</script>
+    </body>
+</html>
