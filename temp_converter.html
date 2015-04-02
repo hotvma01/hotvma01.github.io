@@ -1,34 +1,28 @@
 <html>
-    <body>
-    Input Temperature
-        
-    <input type="text" id="T" value="0"  size="40">
-        
-    <p><button id="fahrenheit" onclick= "F();" >Convert to Fahrenheit</button><p/>
-        
-    <p><button onclick= "C();" id="celsius">Convert to Celsius</button></p>
-        
-    <input type="text" id="O" value="0" size="40">
-    
-    
-       
-    <script>
-        
-            F =function() {
-            T =document.querySelector("#T").value;
-            O =document.querySelector("#O");
-            TempF = T*1.8+32;
-            O.innerhtml=TempF + " Degree F" ;
-            }
-        
-            C =function() {
-            T =document.querySelector("#T").value;
-                
-            TempC = (T-32)*5/9
-            }
-        
-    </script>
-    
+<head>
+<title>Convert Celsius to Fahrenheit</title>
+</head>
+     
+<body>
+     <label for="celsius">Convert Celcius to Fahrenheit</label>
+     <input type="text" min="-40" max="140" id="celsius" onclick="changetemp()" value="0" /> <br>
+     <button onclick="changetemp();"> Convert Temp </button> 
 
-    </body>
-</html>
+ <h1 id="original">0 Degrees C</h1>
+ <h1 id="tempf">32 Degrees F</h1>
+
+
+
+    <script>
+        changetemp = function() {
+        tempc=document.querySelector('#celsius').value;
+        original=document.querySelector('#original');
+        original.innerHTML=tempc + " Degree C" ;
+        tempf = tempc*1.8 + 32;
+        temph1= document.querySelector("#tempf");
+        temph1.innerHTML= tempf + " Degree F";
+ 
+}
+</script>
+</body>
+   </html>
