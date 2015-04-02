@@ -9,8 +9,8 @@
     <input type="text" id="name3">
     <label for="phone">Phone</label>
     <input type="text" id="phone">
-    <label for="e-mail">E-mail</label>
-    <input type="text" id="e-mail">
+    <label for="email">E-mail</label>
+    <input type="text" id="email">
     
     <button onclick="addentry();">Add Contact</button>
     
@@ -30,7 +30,7 @@
 		name2=document.querySelector("#name2").value;
 		name3=document.querySelector("#name3").value;
       		phone=document.querySelector("#phone").value;
-		e-mail=document.querySelector("#e-mail").value;
+		email=document.querySelector("#email").value;
       
       		newrow = document.createElement("tr");
       		td1=document.createElement("td");
@@ -43,7 +43,7 @@
       		td4=document.createElement("td");
       		td4.innerHTML=phone;
       		td5=document.createElement("td");
-      		td5.innerHTML=e-mail;
+      		td5.innerHTML=email;
       		newrow.appendChild(td1);
       		newrow.appendChild(td2);
       		newrow.appendChild(td3);
@@ -55,7 +55,7 @@
           	document.querySelector("#name2").value="";
       		document.querySelector("#name3").value="";
       		document.querySelector("#phone").value="";
-      		document.querySelector("#e-mail").value="";
+      		document.querySelector("#email").value="";
       		}
     
     		editfn=function(){
