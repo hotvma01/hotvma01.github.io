@@ -1,43 +1,49 @@
 <html>
 	<body>	
 		<h1>My Address Book</h1>
-    <label for="fn">First Name</label>
-    <input type="text" id="fn">
-    <label for="ln">Last Name</label>
-    <input type="text" id="ln">
-    <label for="phone">Phone Number</label>
+    <label for="name1">First</label>
+    <input type="text" id="name1">
+    <label for="name2">Middle</label>
+    <input type="text" id="name2">
+    <label for="name3">Last</label>
+    <input type="text" id="name3">
+    <label for="phone">Phone</label>
     <input type="text" id="phone">
-    <label for="email">EMail</label>
-    <input type="text" id="email">
+    <label for="e-mail">E-mail</label>
+    <input type="text" id="e-mail">
     
-    <button onclick="addentry();">Add Item</button>
+    <button onclick="addentry();">Add Contact</button>
     
     <table id="addresstable">
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>First</th>
+        <th>Middle</th>
+        <th>Last</th>
         <th>Phone</th>
-        <th>EMail</th>
+        <th>E-mail</th>
       </tr>
     </table>
     
 	<script>
 		addentry=function(){
-		fn=document.querySelector("#fn").value;
-		ln=document.querySelector("#ln").value;
+		name1=document.querySelector("#name1").value;
+		name2=document.querySelector("#name2").value;
+		name3=document.querySelector("#name3").value;
       		phone=document.querySelector("#phone").value;
-		email=document.querySelector("#email").value;
+		e-mail=document.querySelector("#e-mail").value;
       
       		newrow = document.createElement("tr");
       		td1=document.createElement("td");
-		td1.innerHTML=fn;
-      		td1.onclick=editfn;
+		td1.innerHTML=name1;
+      		td1.onclick=editname1;
       		td2=document.createElement("td");
-      		td2.innerHTML=ln;
+      		td2.innerHTML=name2;
       		td3=document.createElement("td");
-      		td3.innerHTML=phone;
+      		td3.innerHTML=name3;
       		td4=document.createElement("td");
-      		td4.innerHTML=email;
+      		td4.innerHTML=phone;
+      		td5=document.createElement("td");
+      		td5.innerHTML=e-mail;
       		newrow.appendChild(td1);
       		newrow.appendChild(td2);
       		newrow.appendChild(td3);
@@ -45,15 +51,16 @@
       		table=document.querySelector("#addresstable");
       		table.appendChild(newrow);
       
-          	document.querySelector("#fn").value="";
-      		document.querySelector("#ln").value="";
+          	document.querySelector("#name1").value="";
+          	document.querySelector("#name2").value="";
+      		document.querySelector("#name3").value="";
       		document.querySelector("#phone").value="";
-      		document.querySelector("#email").value="";
+      		document.querySelector("#e-mail").value="";
       		}
     
     		editfn=function(){
-      		fn=document.querySelector("#fn").value;
-      		this.innerHTML=fn;
+      		name1=document.querySelector("#name1").value;
+      		this.innerHTML=name1;
       
 		}
       	</script>
